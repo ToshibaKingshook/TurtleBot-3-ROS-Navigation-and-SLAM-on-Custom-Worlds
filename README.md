@@ -1,16 +1,14 @@
 # ros_autonomous_slam
 
 This consist of a ROS package which uses the Navigation Stack to autonomously explore an unknown environment with help of GMAPPING and constructs an Map of the explored environment. Finally a pathplanning algorithm from Navugation stack is used in the newly generated map to reach the goal.The Gazebo simulator is used for the simulation of the Turtlebot3 Waffle Pi robot. Various algorithms have been integrated for the Autonomously exploring the region and constructing the map with help of the 360 degree Lidar sensor. Different environments can be swapped within launch files to generate the map of the environment. The current most efficient algorithm used for autonomous exploration is **Rapidly Exploring Random Tree (RRT) algorithm** . The RRT Algorithm is implemented using the package from [rrt_exploration](http://wiki.ros.org/rrt_exploration) which was created to support the Kobuki robots which I further modified the source files and built it for the Turtlebot3 robots in this package.
-> **You can see the [Towards Data Science Story of this Project](https://mohamedfazilrobotics.medium.com/ros-autonomous-slam-using-randomly-exploring-random-tree-rrt-37186f6e3568)**
-<img src="media/rrt_robot.png" alt="RRT_ROBOT" class="center" width="600"/>
 
-> As this repository is to be updated with more bug free codes as I get requests, please keep reporting the issues and following my updates
+<img src="media/rrt_robot.png" alt="RRT_ROBOT" class="center" width="600"/>
 
 ### There are three Main steps to be executed in this project.
 - Step 1 : Place the Robot in the Environment within Gazebo
 - Step 2 : Perform Autonomous exploration of the environment and generate the Map
 - Step 3 : Perform pathplanning and go to goal in the environment
-### Follow the execution of the different Launch files to acheive the required tasks of each step. (Look below for Project prerequisites and setup)
+### Follow the execution of the different Launch files to acheive the required tasks of each step. 
 
 ## Step 1 : Place the Robot in the Environment within Gazebo
 Set your environment variable to the model robot to be used.
